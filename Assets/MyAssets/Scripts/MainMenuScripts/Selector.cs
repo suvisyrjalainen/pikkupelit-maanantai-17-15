@@ -29,6 +29,20 @@ public class Selector : MonoBehaviour
             Debug.Log(index);
             UpdateColors();
         }
+
+        if(Input.GetKeyDown(KeyCode.UpArrow)){
+
+            index -= 1;
+            if(index < 0){
+                index = items.Length - 1;
+            }
+            Debug.Log(index);
+            UpdateColors();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
+            ActivateItem(index);
+        }
         
     }
 
@@ -43,6 +57,20 @@ public class Selector : MonoBehaviour
                 items[i].color = normalColor;
             }
         }
+    }
+
+    public void ActivateItem(int i){
+        
+        if(items[i].text == "Pikkupelit"){
+            Debug.Log("Selected: " + items[i].text);
+        }
+        else if(items[i].text == "Asetukset"){
+            Debug.Log("Selected: " + items[i].text);
+        }
+        else if(items[i].text == "Lopeta peli"){
+            Debug.Log("Selected: " + items[i].text);
+        }
+
 
     }
 }
