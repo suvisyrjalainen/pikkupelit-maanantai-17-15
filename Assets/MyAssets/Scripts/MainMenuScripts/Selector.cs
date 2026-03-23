@@ -70,7 +70,11 @@ public class Selector : MonoBehaviour
         else if(items[i].text == "Lopeta peli"){
             Debug.Log("Selected: " + items[i].text);
         }
+    }
 
-
+    public void SetIndex(int newIndex)
+    {
+        index = newIndex;
+        UpdateColors();
     }
 }
