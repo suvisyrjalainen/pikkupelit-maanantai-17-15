@@ -749,7 +749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pikkupelit
+  m_text: Asetukset
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd84a53aebcd5964cb56a31303e84195, type: 2}
   m_sharedMaterial: {fileID: 7521166434783758760, guid: fd84a53aebcd5964cb56a31303e84195, type: 2}

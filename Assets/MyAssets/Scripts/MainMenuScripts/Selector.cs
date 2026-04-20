@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
+using System.Collections;
 public class Selector : MonoBehaviour
 {
     public TMP_Text[] items;
 
     public Color normalColor;
     public Color highlightColor;
+
+    public FadeController fade;
 
     private int index = 0;
 
@@ -63,6 +66,7 @@ public class Selector : MonoBehaviour
         
         if(items[i].text == "Pikkupelit"){
             Debug.Log("Selected: " + items[i].text);
+            StartCoroutine(ChangeToMyScene("Pikkupelit"));
         }
         else if(items[i].text == "Asetukset"){
             Debug.Log("Selected: " + items[i].text);
@@ -72,9 +76,18 @@ public class Selector : MonoBehaviour
         }
     }
 
+    private IEnumerator ChangeToMyScene(string sceneName)
+    {
+
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void SetIndex(int newIndex)
     {
         index = newIndex;
         UpdateColors();
     }
+
+
 }
