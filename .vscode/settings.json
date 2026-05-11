@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "pikkupelit-maanantai-17-15.slnx"
+    "dotnet.defaultSolution": "Maanantai-1715-pikkupelit-kevat2026.slnx"
 }

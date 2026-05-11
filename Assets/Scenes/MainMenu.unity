@@ -774,6 +774,7 @@ MonoBehaviour:
   - {fileID: 84562244}
   normalColor: {r: 0.9924528, g: 0.9793449, b: 0.9793449, a: 1}
   highlightColor: {r: 0.96862745, g: 0.95686275, b: 0, a: 1}
+  fade: {fileID: 1847030066}
 --- !u!4 &838353494
 Transform:
   m_ObjectHideFlags: 0
@@ -1192,6 +1193,10 @@ PrefabInstance:
     - target: {fileID: 3182747145759271529, guid: 950cfa18b63c2d8448a0827493e3999e, type: 3}
       propertyPath: m_Name
       value: Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753805684369191991, guid: 950cfa18b63c2d8448a0827493e3999e, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8546274447400400627, guid: 950cfa18b63c2d8448a0827493e3999e, type: 3}
       propertyPath: m_Pivot.x

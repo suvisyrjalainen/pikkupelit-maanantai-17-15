@@ -70,17 +70,32 @@ public class Selector : MonoBehaviour
         }
         else if(items[i].text == "Asetukset"){
             Debug.Log("Selected: " + items[i].text);
+            StartCoroutine(ChangeToMyScene("Asetukset"));
         }
         else if(items[i].text == "Lopeta peli"){
             Debug.Log("Selected: " + items[i].text);
+            StartCoroutine(QuitGame());
         }
     }
 
     private IEnumerator ChangeToMyScene(string sceneName)
     {
 
-        yield return new WaitForSeconds(1);
+        fade.fadeIn();
+        yield return new WaitForSeconds(fade.fadeDuration);
         SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator QuitGame(){
+        fade.fadeIn();
+        yield return new WaitForSeconds(fade.fadeDuration);
+
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+
     }
 
     public void SetIndex(int newIndex)
@@ -88,6 +103,8 @@ public class Selector : MonoBehaviour
         index = newIndex;
         UpdateColors();
     }
+
+
 
 
 }
